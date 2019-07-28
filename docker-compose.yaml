@@ -1,0 +1,23 @@
+version: '3'
+services:
+  kafka:
+    image: spotify/kafka
+    ports:
+    - "2181:2181"
+    - "9092:9092"
+    expose:
+    - 9092
+    environment:
+      ADVERTISED_HOST: localhost
+      ADVERTISED_PORT: 9092
+#  importer:
+#    ports:
+#    - 8080:8080
+#    build: ./
+#    depends_on:
+#    - kafka
+#    links:
+#    - kafka
+#    environment:
+#      SPRING_KAFKA_BOOTSTRAP_SERVERS: :9092
+
